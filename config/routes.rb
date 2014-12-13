@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-	root to: 'games#new'
+	root to: 'pages#index'
 
+	resources :pages, only: [:index]
 	resources :games, only: [:create, :new, :index]
 
   # commiting a worthless comment
