@@ -1,2 +1,20 @@
 <h1>Whack-a-Mold</h1>
+
+<h2>High Scores</h2>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Score</th>
+	</tr>
+	<% @games.each do |game| %>
+		<tr>
+			<td>
+				<%= game.name %>
+			</td>
+			<td>
+				<%= game.score %>
+			</td>
+		</tr>
+	<% end %>
+</table>
 <%= link_to "Start a New Game", new_game_path() %>

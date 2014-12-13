@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-		@games = Game.all
+		@games = Game.all.take(10)
 		respond_to do |format|
 			format.html
 			format.json { render json: @games }
