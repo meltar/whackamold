@@ -3,8 +3,10 @@
     <% 3.times do |row| %>
       <tr>
         <% 3.times do |col| %>
-          <td class="bread">
-            <img src="/assets/hole.png" />
+          <td data-js="hole<%= row %><%= col %>" class="hole">
+            <img class="circle" src="/assets/hole.png" />
+            <span class="bread"></span>
+            <span class="bread-mold hide"></span>
           </td>
         <% end %>
       </tr>
