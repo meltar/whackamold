@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'game/create'
-
-  get 'game/new'
-
-  get 'game/index'
 	root to: 'games#new'
 
 	resources :games, only: [:create, :new, :index]
