@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	root to: 'pages#index'
+	root to: 'games#index'
 
 	resources :pages, only: [:index]
 	resources :games, only: [:create, :new, :index]
