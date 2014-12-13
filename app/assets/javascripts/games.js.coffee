@@ -17,13 +17,12 @@ do ($) ->
 
 
     $(".hole").click ->
-      console.warn $(@).attr("data-js")
       $(@).find(".bread").fadeOut("slow")
-      score = score + 1
+      score = score - 1
 
     $(".hole").click ->
-      $(".bread-mold").fadeOut("slow")
-      score = score - 1
+      $(@).find(".bread-mold").fadeOut("slow")
+      score = score + 1
 
 
 
