@@ -21,4 +21,8 @@ class GamesController < ApplicationController
 			render 'new'
 		end
   end
+
+	def game_params
+		params.require(:game).permit(:name, :score)
+	end
 end
